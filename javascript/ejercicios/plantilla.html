@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EJERCICIO</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark p-3">
+
+    <!-- INICIO SECCION EJERCICIO -->
+    <section class="container bg-light rounded pb-3 mb-3">
+        <h2 class="text-center">TITULO DEL EJERCICIO</h2>
+        <h4>Consigna:</h4>
+        <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, odit iure quae voluptate possimus blanditiis consequuntur praesentium perspiciatis veritatis fuga eaque rem autem dignissimos nam nesciunt minima, quibusdam nihil iste.</p>
+        <h4>Solucion:</h4>
+        <div class="border border-success rounded p-2">
+            <button type="submit" class="btn btn-primary" onclick="sumar()">Comenzar</button>
+            <p id="suma"></p>
+        </div>
+    </section>
+    <!-- FIN SECCION EJERCICIOS -->
+
+    <!--  -->
+    <script>
+
+        function sumar() {
+            do {
+                pedir();
+            } while (confirm("Desea ingresar otro Numero?"));
+        }
+
+        function pedir() {
+            let numero = prompt("Por favor ingrese el numero a sumar:");
+
+            while (isNaN(numero)) {
+                alert("Lo que ingreso, nose que era, pero un numero seguro que no. POR FAVOR INGRESE UN NUMERO VALIDO");
+                numero = prompt("Por favor ingrese el numero a sumar:");
+            }
+
+            document.getElementById("suma").innerHTML = Number(document.getElementById("suma").innerHTML) + Number(numero);
+        }
+
+    </script>
+    <!--  -->
+</body>
+
+</html>
